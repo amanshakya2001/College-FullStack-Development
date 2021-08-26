@@ -1,0 +1,29 @@
+body
+{
+    background-image:url('https://images.pexels.com/photos/490466/pexels-photo-490466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-repeat:no-repeat;
+    background-position:top;
+    background-size:cover;
+    margin: 0px 0px;
+}
+.navbar
+{
+    background-color: black;
+}
+.navbar ul
+{
+    display: inline-flex;
+    padding: 0.1rem;
+}
+.navbar ul li a
+{
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+    margin-left:10rem;
+}
+.navbar ul li a:hover
+{
+    background-color: gold;
+    color: black;
+}
