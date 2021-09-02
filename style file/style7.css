@@ -1,29 +1,88 @@
-body
+.header
 {
-    background-image:url('https://images.pexels.com/photos/490466/pexels-photo-490466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-    background-repeat:no-repeat;
-    background-position:top;
-    background-size:cover;
-    margin: 0px 0px;
+    background-color: grey;
+    padding: 10px;
+    margin: 5px;
 }
-.navbar
+h1,.bannertext
 {
-    background-color: black;
-}
-.navbar ul
-{
-    display: inline-flex;
-    padding: 0.1rem;
-}
-.navbar ul li a
-{
-    text-decoration: none;
+    text-align: center;
     color: white;
-    font-size: x-large;
-    margin-left:10rem;
+    margin: 0;
 }
-.navbar ul li a:hover
+.banner
 {
-    background-color: gold;
+    background-color: skyblue;
+    margin: 5px;
+    height: 400px;
+}
+.bannertext
+{
+    line-height: 400px;
+}
+.section1
+{
+    margin: 10px;
     color: black;
+    text-align: center;
+}
+.rowcircle
+{
+    display: flex;
+    margin: 5px;
+}
+.circle
+{
+    height: 300px;
+    width: 25%;
+    background-color: darkgoldenrod;
+    border-radius: 50%;
+    margin: 15px;
+}
+.containerinside
+{
+    display: flex;
+    margin: 5px;
+}
+.col50
+{
+    width: 50%;
+    margin: 10px;
+}
+.greycol
+{
+    background-color: grey;
+}
+.row3
+{
+    background-color:chocolate;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.mainheading
+{
+    text-align: center;
+    color: white;
+    line-height: 300px;
+    margin: 0;
+}
+h2
+{
+    margin: 0;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+}
+.square
+{
+    background-color: orangered;
+    width: 25%;
+    height: 300px;
+    margin: 5px;
+}
+.footer
+{
+    background-color:rgb(252, 147, 165);
+    padding: 10px;
+    margin: 5px;
 }
