@@ -81,6 +81,7 @@ h1.team
 .greycol
 {
     background-color: grey;
+    height: 100%;
 }
 .greycol h2
 {
@@ -99,7 +100,7 @@ h1.team
 .row3
 {
     background-color:chocolate;
-    height: 100px;
+    height:33%;
     margin-bottom: 10px;
 }
 .row3 h2
