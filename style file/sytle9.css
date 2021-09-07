@@ -1,0 +1,65 @@
+body
+{
+    background-color: grey;
+    margin: 0;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+}
+.door
+{
+    background-color: white;
+    height: 300px;
+    width: 500px;
+    position: relative;
+}
+.slider1
+{
+    background-color: orange;
+    width: inherit;
+    height: 100px;
+    top:0;
+    right: 500px;
+    position: absolute;
+    transition: 0.5s;
+}
+.slider2
+{
+    display: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    top:100px;
+    position: absolute;
+    transition: 0.5s;
+}
+.slider3
+{
+    background-color: green;
+    width: inherit;
+    height: 100px;
+    top:200px;
+    right: -500px;
+    position: absolute;
+    transition: 0.5s;
+}
+.door:hover .slider1
+{
+    right: 0;
+    top:0;
+}
+.door:hover .slider2
+{
+    display:block;
+    right: 200px;
+    top:100px;
+}
+.door:hover .slider3
+{
+    right: 0;
+    top:200px;
+}
