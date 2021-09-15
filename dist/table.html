@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table</title>
+    <style>
+      table {
+        margin: auto;
+        width: 50%;
+      }
+      tr
+      {
+          height: 10px;
+      }
+      tr,
+      td,
+      table,
+      th {
+        color: black;
+        text-align: center;
+        border: 1px solid blue;
+      }
+      thead  tr th{
+        background-color: navy;
+        color: white;
+      }
+      tbody tr:nth-child(even) {
+        background-color: grey;
+      }
+      tfoot tr td {
+        background-color: skyblue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <table cellspacing=0.2px cellpadding=10px>
+      <tr>
+        <td>C Programming</td>
+        <td>1 Month</td>
+        <td>Rs. 3000</td>
+      </tr>
+      <tr>
+        <td>Java Programming</td>
+        <td>3 Month</td>
+        <td>Rs. 7000</td>
+      </tr>
+      <tr>
+        <td>Python Programming</td>
+        <td>6 Month</td>
+        <td>Rs. 5000</td>
+      </tr>
+      <thead>
+        <tr>
+          <th>Subject Name</th>
+          <th>Subject Duration</th>
+          <th>Subject Fees</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total Fees</td>
+          <td>Rs. 15000</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
