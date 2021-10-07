@@ -13,7 +13,7 @@ table
     width: 100%;
     border-radius: 10px;
 }
-thead
+thead tr
 {
     background-color:#2a3e49;
     border-radius: 10px;
