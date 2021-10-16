@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical14</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: gray;
+      }
+      .main {
+        display: none;
+      }
+      .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+        margin: auto;
+        margin-top: 20%;
+      }
+
+      /* Safari */
+      @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .loading p {
+        text-align: center;
+        margin: 20px;
+        font-weight: bolder;
+        color: white;
+        text-transform: uppercase;
+      }
+      body h1 {
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 100px;
+      }
+      body .box {
+        display: block;
+        margin: auto;
+        width: fit-content;
+      }
+      body .button {
+        padding: 5px 10px;
+        background-color: yellow;
+      }
+      body .button {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+        font-size: 20px;
+      }
+      body span {
+        margin: 15px;
+      }
+      body #number {
+        color: yellow;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body onload="onload()">
+    <div class="loading" id="loading">
+      <div class="loader"></div>
+      <p>Loading...</p>
+    </div>
+    <div class="main" id="main">
+      <h1>counter</h1>
+      <div class="box">
+        <span><a href="#" onclick="decrease()" class="button">-</a></span>
+        <span id="number">0</span>
+        <span><a href="#" onclick="increase()" class="button">+</a></span>
+      </div>
+    </div>
+  </body>
+  <script>
+    var value = 0;
+    function increase() {
+      value++;
+      document.getElementById("number").innerHTML = value;
+    }
+    function decrease() {
+      if (value == 0) {
+        return false;
+      }
+      value--;
+      document.getElementById("number").innerHTML = value;
+    }
+    function onload() {
+        setInterval(function(){ document.getElementById("loading").style.display = "block" }, 3000);
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("main").style.display = "block";
+    }
+    function sleep(milliseconds) {
+      const date = Date.now();
+      let currentDate = null;
+      do {
+        currentDate = Date.now();
+      } while (currentDate - date < milliseconds);
+    }
+  </script>
+</html>
