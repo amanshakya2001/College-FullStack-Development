@@ -14,46 +14,6 @@
       body {
         background-color: gray;
       }
-      .main {
-        display: none;
-      }
-      .loader {
-        border: 16px solid #f3f3f3;
-        border-radius: 50%;
-        border-top: 16px solid #3498db;
-        width: 120px;
-        height: 120px;
-        -webkit-animation: spin 2s linear infinite; /* Safari */
-        animation: spin 2s linear infinite;
-        margin: auto;
-        margin-top: 20%;
-      }
-
-      /* Safari */
-      @-webkit-keyframes spin {
-        0% {
-          -webkit-transform: rotate(0deg);
-        }
-        100% {
-          -webkit-transform: rotate(360deg);
-        }
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-      .loading p {
-        text-align: center;
-        margin: 20px;
-        font-weight: bolder;
-        color: white;
-        text-transform: uppercase;
-      }
       body h1 {
         color: white;
         text-transform: uppercase;
@@ -84,11 +44,7 @@
       }
     </style>
   </head>
-  <body onload="onload()">
-    <div class="loading" id="loading">
-      <div class="loader"></div>
-      <p>Loading...</p>
-    </div>
+  <body>
     <div class="main" id="main">
       <h1>counter</h1>
       <div class="box">
@@ -110,18 +66,6 @@
       }
       value--;
       document.getElementById("number").innerHTML = value;
-    }
-    function onload() {
-        setInterval(function(){ document.getElementById("loading").style.display = "block" }, 3000);
-      document.getElementById("loading").style.display = "none";
-      document.getElementById("main").style.display = "block";
-    }
-    function sleep(milliseconds) {
-      const date = Date.now();
-      let currentDate = null;
-      do {
-        currentDate = Date.now();
-      } while (currentDate - date < milliseconds);
     }
   </script>
 </html>
